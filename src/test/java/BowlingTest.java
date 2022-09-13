@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,5 +25,13 @@ public class BowlingTest {
         BowlingGame game = new BowlingGame(rolls);
         int result = game.score();
         assertEquals(20, result);
+    }
+
+    @Test
+    public void spareGameScores29(){
+        int[] rolls = {9,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+        assertEquals(29, result);
     }
 }

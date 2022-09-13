@@ -7,8 +7,14 @@ public class BowlingGame {
 
     public int score() {
         int result = 0;
-        for (int roll:rolls) {
-            result += roll;
+        int rollIndex = 0;
+        for (int i = 0; i < 10; i++) {
+            if (rolls[rollIndex] + rolls[rollIndex + 1] == 10) {
+                result += rolls[rollIndex] + rolls[rollIndex + 1] + rolls[rollIndex + 2];
+            } else {
+                result += rolls[rollIndex] + rolls[rollIndex + 1];
+            }
+            rollIndex += 2;
         }
         return result;
     }
