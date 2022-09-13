@@ -22,8 +22,7 @@ public class BowlingFixture {
 
     public int score(){
 
-        BowlingGame game = new BowlingGame();
-        game.rolls(rollsArray());
+        BowlingGame game = new BowlingGame(rollsArray());
         return game.score();
     }
 

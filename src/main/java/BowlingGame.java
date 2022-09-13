@@ -1,8 +1,8 @@
 public class BowlingGame {
-    public int score() {
-        return 0;
+    public BowlingGame(int[] rolls) {
     }
 
-    public void rolls(int[] rolls) {
+    public int score() {
+        return 0;
     }
 }

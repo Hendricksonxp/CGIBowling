@@ -13,9 +13,9 @@ public class BowlingTest {
     @Test
     public void allGutterBallsScoresZero() {
         //Arrange
-        BowlingGame game = new BowlingGame();
         int[] rolls = {0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
-        game.rolls(rolls);
+        BowlingGame game = new BowlingGame(rolls);
+
         //Act
         int result = game.score();
 
