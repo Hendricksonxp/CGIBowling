@@ -12,14 +12,17 @@ public class BowlingTest {
 
     @Test
     public void allGutterBallsScoresZero() {
-        //Arrange
         int[] rolls = {0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
         BowlingGame game = new BowlingGame(rolls);
-
-        //Act
         int result = game.score();
-
-        //Assert
         assertEquals(0, result);
+    }
+
+    @Test
+    public void openFramesScores20(){
+        int[] rolls = {1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+        assertEquals(20, result);
     }
 }

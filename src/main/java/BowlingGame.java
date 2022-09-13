@@ -1,8 +1,15 @@
 public class BowlingGame {
+    private final int[] rolls;
+
     public BowlingGame(int[] rolls) {
+        this.rolls = rolls;
     }
 
     public int score() {
-        return 0;
+        int result = 0;
+        for (int roll:rolls) {
+            result += roll;
+        }
+        return result;
     }
 }
