@@ -1,3 +1,5 @@
+import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,5 +28,32 @@ public class BowlingTest {
         int result = game.score();
 
         assertEquals(30, result);
+    }
+
+    @Test
+    public void spare(){
+        int[] rolls = {0,0, 4,6, 2,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+
+        assertEquals(14, result);
+    }
+
+    @Test
+    public void betterSpare(){
+        int[] rolls = {5,0, 4,6, 2,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+
+        assertEquals(19, result);
+    }
+
+    @Test
+    public void strike(){
+        int[] rolls = {5,0, 10, 2,4, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+
+        assertEquals(27, result);
     }
 }
