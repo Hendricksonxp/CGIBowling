@@ -56,4 +56,13 @@ public class BowlingTest {
 
         assertEquals(27, result);
     }
+
+    @Test
+    public void perfectGame(){
+        int[] rolls = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+
+        assertEquals(300, result);
+    }
 }
