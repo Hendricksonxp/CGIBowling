@@ -12,7 +12,6 @@ public class BowlingFixture {
         rolls = new ArrayList<Integer>();
     }
 
-
     public void setFrame(String roll){
         int[] result = parse(roll);
         for (int i : result) {
@@ -21,7 +20,6 @@ public class BowlingFixture {
     }
 
     public int score(){
-
         BowlingGame game = new BowlingGame(rollsArray());
         return game.score();
     }
