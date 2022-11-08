@@ -25,11 +25,20 @@ public class BowlingTest {
         int result = game.score();
         assertEquals(20, result);
     }
+
     @Test
-    public void spareFrameScores(){
+    public void spareFrameScoresTwentyNine(){
         int[] rolls = {1,1, 9,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
         BowlingGame game = new BowlingGame(rolls);
         int result = game.score();
         assertEquals(29, result);
+    }
+
+    @Test
+    public void strikeFrameScoresThirty(){
+        int[] rolls = {1,1, 10, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+        assertEquals(30, result);
     }
 }
