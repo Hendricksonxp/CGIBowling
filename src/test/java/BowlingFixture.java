@@ -20,7 +20,8 @@ public class BowlingFixture {
     }
 
     public int score(){
-        return 72;
+        BowlingGame game = new BowlingGame(rollsArray());
+        return game.score();
     }
 
     public int size(){
