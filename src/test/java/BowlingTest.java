@@ -16,4 +16,12 @@ public class BowlingTest {
         int result = game.score();
         assertEquals(0, result);
     }
+
+    @Test
+    public void allOnesScoreTwenty(){
+        int[] rolls = {1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.score();
+        assertEquals(20, result);
+    }
 }
