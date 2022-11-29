@@ -20,7 +20,16 @@ public class BowlingTest {
 
         //assert
         assertEquals(0,result);
-
     }
+
+    @Test
+    public void openFrame(){
+        int[]rolls = {1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.totalScore();
+        assertEquals(20,result);
+    }
+
+
 
 }
