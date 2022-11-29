@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,6 +31,12 @@ public class BowlingTest {
         assertEquals(20,result);
     }
 
-
+    @Test
+    public void spareFrame(){
+        int[]rolls = {1,9, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.totalScore();
+        assertEquals(29,result);
+    }
 
 }

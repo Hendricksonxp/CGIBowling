@@ -1,4 +1,5 @@
 public class BowlingGame {
+    public static final int FRAMES = 10;
     private final int[] rolls;
 
     public BowlingGame(int[] rolls) {
@@ -7,8 +8,14 @@ public class BowlingGame {
 
     public int totalScore() {
         int result = 0;
-        for (int i = 0; i < rolls.length; i++) {
-            result += rolls[i];
+        int rollIndex = 0;
+        for (int i = 0; i < FRAMES; i++) {
+            if (rolls[rollIndex] + rolls[rollIndex + 1] == 10) {
+                result = rolls[rollIndex] + rolls[rollIndex + 1] + rolls[rollIndex + 2];
+            } else {
+                result += rolls[rollIndex] + rolls[rollIndex + 1];
+            }
+            rollIndex += 2;
         }
         return result;
     }
