@@ -39,4 +39,12 @@ public class BowlingTest {
         assertEquals(29,result);
     }
 
+    @Test
+    public void twoSpareFrames(){
+        int[]rolls = {1,9, 5,5, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1};
+        BowlingGame game = new BowlingGame(rolls);
+        int result = game.totalScore();
+        assertEquals(42,result);
+    }
+
 }

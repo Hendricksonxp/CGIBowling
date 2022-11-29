@@ -11,7 +11,7 @@ public class BowlingGame {
         int rollIndex = 0;
         for (int i = 0; i < FRAMES; i++) {
             if (rolls[rollIndex] + rolls[rollIndex + 1] == 10) {
-                result = rolls[rollIndex] + rolls[rollIndex + 1] + rolls[rollIndex + 2];
+                result += rolls[rollIndex] + rolls[rollIndex + 1] + rolls[rollIndex + 2];
             } else {
                 result += rolls[rollIndex] + rolls[rollIndex + 1];
             }
